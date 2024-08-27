@@ -1,0 +1,182 @@
+-- Import the Orion library
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/Documentation.md"))()
+local Window = OrionLib:MakeWindow({Name = "King's Hub | @siamdev", HidePremium = false, SaveConfig = true, ConfigFolder = "KingHub"})
+
+-- Utility function to get the player's character
+local function getCharacter()
+    return game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+end
+
+-- Tabs
+local DiscordTab = Window:MakeTab({Name = "Discord", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+local RaceV4Tab = Window:MakeTab({Name = "Race V4", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+local PvPTab = Window:MakeTab({Name = "PvP", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+local RaidsTab = Window:MakeTab({Name = "Raids", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+local FruitsTab = Window:MakeTab({Name = "Fruits", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+local EspTab = Window:MakeTab({Name = "Esp", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+local MiscTab = Window:MakeTab({Name = "Misc", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+local CreditTab = Window:MakeTab({Name = "Credit", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+
+-- Auto Farm Level Button
+DiscordTab:AddButton({
+    Name = "Auto Farm Level",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+        local level = player.Data.Level.Value -- Adjust to get player level
+        local maxLevel = 2550
+        
+        while level < maxLevel do
+            -- Placeholder: Teleport to Quest NPC
+            -- Example: Replace with code to find and teleport to NPC
+            wait(1)
+
+            -- Placeholder: Kill NPC for quest
+            -- Example: Replace with code to interact with and kill NPC
+            wait(1)
+
+            -- Update player level
+            level = player.Data.Level.Value
+        end
+    end
+})
+
+-- Nearest Farm Button
+DiscordTab:AddButton({
+    Name = "Nearest Farm",
+    Callback = function()
+        while true do
+            -- Placeholder: Find and move to nearest NPC
+            -- Example: Replace with code to find and approach nearest NPC
+            wait(1)
+
+            -- Placeholder: Kill nearest NPC
+            -- Example: Replace with code to attack and kill NPC
+            wait(1)
+        end
+    end
+})
+
+-- Fruit Mastery Button
+DiscordTab:AddButton({
+    Name = "Fruit Mastery",
+    Callback = function()
+        while true do
+            -- Placeholder: Use fruit abilities on NPCs
+            -- Example: Replace with code to find NPC and use fruit attacks
+            wait(1)
+
+            -- Placeholder: Kill NPC to increase fruit mastery
+            -- Example: Replace with code to attack and kill NPC
+            wait(1)
+        end
+    end
+})
+
+-- Auto Gun Mastery Button
+DiscordTab:AddButton({
+    Name = "Auto Gun Mastery",
+    Callback = function()
+        while true do
+            -- Placeholder: Use gun on NPCs
+            -- Example: Replace with code to find NPC and use gun attacks
+            wait(1)
+
+            -- Placeholder: Kill NPC to increase gun mastery
+            -- Example: Replace with code to attack and kill NPC
+            wait(1)
+        end
+    end
+})
+
+-- Teleport to Temple of Time Button
+RaceV4Tab:AddButton({
+    Name = "Teleport Temple Of Time",
+    Callback = function()
+        -- Placeholder: Teleport to Temple of Time
+        -- Example: Replace with code to teleport to specific coordinates or location
+        wait(1)
+    end
+})
+
+-- Teleport to Ancient Cloak Button
+RaceV4Tab:AddButton({
+    Name = "Teleport To Ancient Cloak",
+    Callback = function()
+        -- Placeholder: Teleport to Ancient Cloak
+        -- Example: Replace with code to teleport to specific coordinates or location
+        wait(1)
+    end
+})
+
+-- Toggle Kill Nearest Player Button
+RaceV4Tab:AddToggle({
+    Name = "Kill Nearest Player",
+    Callback = function(enabled)
+        while enabled do
+            -- Placeholder: Find and attack nearest player
+            -- Example: Replace with code to target and attack nearest player
+            wait(1)
+        end
+    end
+})
+
+-- Auto Buy Gear Button
+RaceV4Tab:AddButton({
+    Name = "Auto Buy Gear",
+    Callback = function()
+        -- Placeholder: Automatically buy gear
+        -- Example: Replace with code to purchase gear after trial completion
+        wait(1)
+    end
+})
+
+-- Aimbot Tap Button
+PvPTab:AddToggle({
+    Name = "Aimbot Tap",
+    Callback = function(enabled)
+        while enabled do
+            -- Placeholder: Aimbot functionality for abilities
+            -- Example: Replace with code to automatically target nearest player with abilities
+            wait(0.5)
+        end
+    end
+})
+
+-- Aimbot Skill Button
+PvPTab:AddToggle({
+    Name = "Aimbot Skill",
+    Callback = function(enabled)
+        while enabled do
+            -- Placeholder: Aimbot functionality for skills
+            -- Example: Replace with code to automatically target nearest player with skills
+            wait(0.5)
+        end
+    end
+})
+
+-- Auto Farm Raid Button
+RaidsTab:AddButton({
+    Name = "Auto Farm Raid",
+    Callback = function()
+        -- Placeholder: Start raid and farm NPCs
+        -- Example: Replace with code to start raid, move NPCs to void, and farm
+        wait(1)
+    end
+})
+
+-- Auto Buy Chip Button
+RaidsTab:AddButton({
+    Name = "Auto Buy Chip",
+    Callback = function()
+        -- Placeholder: Automatically buy raid chips
+        -- Example: Replace with code to purchase chips and select options
+        wait(1)
+    end
+})
+
+-- Fruit Spawn Teleport Button
+FruitsTab:AddToggle({
+    Name = "Auto Teleport to Fruit",
+    Callback = function(enabled)
+        while enabled do
+            -- Placeholder
